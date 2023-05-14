@@ -1,0 +1,45 @@
+#getQuote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#onclick {
+    font-family: monospace;
+    border-radius: 15px;
+    border-color: black;
+    display: inline-block;
+    background-color:#f8f4e3;
+}
+#onclick:hover {
+    background-color: aqua;
+}
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+header, #quote-text, #quote-author {
+    font-family: sans-serif;
+    margin: 30px;
+    padding: 5px;
+}
+header {
+    text-decoration: underline;
+}
+#quote {
+    border-radius: 15pt;
+    border-style: solid;
+    border-width: 5pt;
+    border-color: black;
+    background-color: #f8f4e3;
+    margin: 30px;
+    padding: 20px;
+    text-align: center;
+}
+#quote-text {
+    font-size: 20pt;
+    font-family: fantasy;
+    letter-spacing: 0.5px;
+}
+#quote-author {
+    font-style: italic;
+    text-align: right;
+}

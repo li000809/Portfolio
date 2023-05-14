@@ -1,0 +1,399 @@
+#hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url("image/cover-image.webp");
+  background-size: cover;
+  position: relative;
+}
+
+/* top right no-repeat */
+#hero img {
+  float: right;
+  width: 5%;
+  height: 5%;
+}
+
+#hero:before {
+  content: "";
+  background: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#hero h1 {
+  margin: 0;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #45505b;
+}
+
+#hero p {
+  color: #45505b;
+  margin: 15px 0 0 0;
+  font-size: 26px;
+  font-family: "Poppins", sans-serif;
+}
+
+#hero p span {
+  color: #0563bb;
+  letter-spacing: 1px;
+}
+
+#hero .social-links {
+  margin-top: 30px;
+}
+
+#hero .social-links a {
+  font-size: 24px;
+  display: inline-block;
+  color: #45505b;
+  line-height: 1;
+  margin-right: 20px;
+  transition: 0.3s;
+}
+
+#hero .social-links a:hover {
+  color: #0563bb;
+}
+
+@media (max-width: 992px) {
+  #hero {
+    text-align: center;
+  }
+
+  #hero h1 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  #hero p {
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #45505b;
+}
+
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #0563bb;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+#sidebar {
+  display: flex;
+  align-items: center;
+}
+
+#sidebar img {
+  margin-left: auto;
+}
+
+#home-title-part {
+  background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/003.webp');
+}
+
+#home-highlight {
+  text-align: center;
+  text-indent: 15em;
+  padding-top: 4vh;
+}
+
+#home-me {
+  float: right;
+  width: 25%;
+  height: 25%;
+  margin-top: 10vh;
+}
+
+.home-card-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.home-descript1 {
+  /* align-items: start; */
+  background-image: url('image/4.jpg');
+  background-size: cover;
+  float: left;
+  width: 40%;
+  height: 20rem;
+  margin: 10vw 5vw 10vw 5vw;
+}
+
+.home-descript2 {
+  background-image: url('image/home-solo.JPG');
+  background-size: cover;
+  float: right;
+  width: 40%;
+  height: 20rem;
+  margin: 10vw 5vw 10vw 5vw;
+}
+
+#home-card-container2 .home-descript1 {
+  background-image: url('image/home-marvel.jpg');
+  background-size: cover;
+  float: left;
+  width: 40%;
+  height: 20rem;
+  margin: 10vw 5vw 10vw 5vw;
+}
+
+#home-card-container2 b {
+  font-family: cursive;
+}
+
+#home-card-container2 .home-descript2 {
+  background-image: url('image/home-aerobics.png');
+  background-size: cover;
+  float: right;
+  width: 40%;
+  height: 20rem;
+  margin: 10vw 5vw 10vw 5vw;
+}
+
+#education1 {
+  background-image: url('image/programming.gif');
+  padding: 0em 2em 4em 0em;
+  margin: 4em;
+}
+
+#education2 {
+  background-image: url('image/human-resources.jpg');
+  padding: 0em 2em 4em 0em;
+  margin: 4em;
+}
+
+#education3 {
+  background-image: url('image/sycm1.jpg');
+  background-size: cover;
+  padding: 0em 2em 4em 0em;
+  margin: 4em;
+}
+
+.education-details p {
+  margin: 1vh;
+  text-indent: 10em;
+}
+
+.resume-card-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#skill1 {
+  background-image: url('image/skill-language.jpg');
+  background-size: cover;
+  float: left;
+  width: 40%;
+  height: 20rem;
+  margin: 10vw 2vw 10vw 2vw;
+}
+
+#skill1 p {
+  text-align: right;
+  font-weight: bold;
+}
+
+#skill2 {
+  background-image: url('image/skill-OS.jpg');
+  background-size: cover;
+  float: left;
+  width: 40%;
+  height: 20rem;
+  margin: 10vw 2vw 10vw 2vw;
+}
+
+#skill3 {
+  background-image: url('image/3.jpg');
+  background-size: cover;
+  float: right;
+  width: 40%;
+  height: 20rem;
+  margin: 10vw 2vw 10vw 2vw;
+  font-size: 0.8em;
+}
+
+.skills-details p {
+  margin: 1vh;
+}
+
+/* experience */
+#experience-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5em 2em 0em 2em;
+}
+
+#experience-cards .card {
+  width: 45%;
+  margin: 2em 1em 0em 1em;
+}
+
+#experience-cards .card p {
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+#work2 img:hover {
+  opacity: 0.6;
+}
+
+.card-quote i {
+  font-size: 0.8em;
+}
+
+.card-quote li {
+  font-size: 0.7em;
+}
+
+@media (max-width: 767px) {
+  #experience-cards .card {
+    width: 100%;
+  }
+}
+
+#objectives {
+  margin-top: 8em;
+}
+
+#objective-image {
+  margin: 5em 2em 0em 2em;
+}
+
+#objective-image img {
+  height: 60%;
+}
+
+#achievements {
+  margin-top: 8em;
+}
+
+#achieve-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5em 2em 0em 2em;
+}
+
+#achieve-list .card {
+  width: 45%;
+  margin: 1em;
+}
+
+@media (max-width: 767px) {
+  #achieve-list .card {
+    width: 100%;
+  }
+}
+
+#achievements img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#achievements img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+
+
+
+/* search bar */
+#search {
+  margin-top: 5em;
+}
+
+#search ul {
+  margin-top: 2em;
+}
+
+/* filter */
+#filter-buttons .btn {
+  margin: 5em 1em 0em 1em;
+}
+
+/* course list */
+#course-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5em 2em 0em 2em;
+}
+
+#course-list .card {
+  width: 30%;
+  margin: 1em;
+}
+
+#level2-coop img:hover {
+  opacity: 0.6;
+}
+
+#course-list .card p {
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+@media (max-width: 767px) {
+  #course-list .card {
+    width: 100%;
+  }
+}
+
+
+/* footer */
+footer p {
+  text-align: center;
+}
+
+
+
+
+

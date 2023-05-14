@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Yueying Li">
+    <title>Yueying Li's Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="assign1.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header>
+        <nav id="header-nav" class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarExample01" aria-controls="navbarExample01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarExample01">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index_resume.html">Resume</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index_courses.html">Courses</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- my name and cover picture -->
+    <section id="hero" class="bg-image d-flex justify-content-center align-items-center">
+        <div class="container-courses aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
+            <h1 class="text-white">Yueying Li</h1>
+            <p>"I'm"
+                <span class="typed text-black" data-typed-items="Designer, Developer, Freelancer, Photographer">
+                    a learner of programmer</span>
+                <span class="typed-cursor typed-cursor--blink" aria-hidden="true">|</span>
+            </p>
+        </div>
+    </section>
+
+    <main>
+        <div id="search">
+            <!-- search bar -->
+            <input id="user-input" type="search" class="form-control" onkeyup="mySearch()"
+                placeholder="Search for Courses by the following Name" title="Type in a name">
+            <ul id="search-list" class="list-group list-group-light">
+                <li>
+                    <a href="#level1-essentials"
+                        class="level-1 filterDiv list-group-item list-group-item-action px-3 border-0 rounded-3 mb-2 list-group-item-info">
+                        Computer Essentials
+                    </a>
+                </li>
+                <li>
+                    <a href="#level1-programming"
+                        class="level-1 filterDiv list-group-item list-group-item-action px-3 border-0 rounded-3 mb-2  list-group-item-secondary">
+                        Introduction to Computer Programming
+                    </a>
+                </li>
+                <li>
+                    <a href="#level1-database"
+                        class="level-1 filterDiv list-group-item list-group-item-action px-3 border-0 rounded-3 mb-2 list-group-item-info">
+                        Introduction to Database
+                    </a>
+                </li>
+                <li>
+                    <a href="#level1-math"
+                        class="level-1 filterDiv list-group-item list-group-item-action px-3 border-0 rounded-3 mb-2  list-group-item-secondary">
+                        Technical Mathematics for Computer Science
+                    </a>
+                </li>
+                <li>
+                    <a href="#level2-java"
+                        class="level-2 filterDiv list-group-item list-group-item-action px-3 border-0 rounded-3 mb-2 list-group-item-info">
+                        Object Oriented Programming (Java)
+                    </a>
+                </li>
+                <li>
+                    <a href="#level2-database"
+                        class="level-2 filterDiv list-group-item list-group-item-action px-3 border-0 rounded-3 mb-2  list-group-item-secondary">
+                        Database Systems
+                    </a>
+                </li>
+                <li>
+                    <a href="#level2-linux"
+                        class="level-2 filterDiv list-group-item list-group-item-action px-3 border-0 rounded-3 mb-2 list-group-item-info">
+                        Operating System Fundamentals (GNU/Linux)
+                    </a>
+                </li>
+                <li>
+                    <a href="#level2-web"
+                        class="level-2 filterDiv list-group-item list-group-item-action px-3 border-0 rounded-3 mb-2  list-group-item-secondary">
+                        Web Programming
+                    </a>
+                </li>
+                <li>
+                    <a href="#level2-coop"
+                        class="level-2 filterDiv list-group-item list-group-item-action px-3 border-0 rounded-3 mb-2 list-group-item-info">
+                        Cooperative Education and Job Readiness
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- filter -->
+        <div id="filter-buttons" class="d-flex justify-content-start">
+            <button class="btn btn-small btn-primary" onclick="filterCourses('all')">Show All</button>
+            <button class="btn btn-small btn-primary" onclick="filterCourses('level-1')">Level 1</button>
+            <button class="btn btn-small btn-primary" onclick="filterCourses('level-2')">Level 2</button>
+        </div>
+
+        <!-- sort -->
+        <div id="sort-buttons" class="d-flex justify-content-end">
+            <button class="btn btn-small btn-primary" onclick="ascendSort('level-1','level-2')">
+                Sort by Ascending
+            </button>
+            <button class="btn btn-small btn-primary" onclick="descendSort('level-2','level-1')">
+                Sort by Descending
+            </button>
+        </div>
+
+
+
+        <!-- list of courses  flex-wrap -->
+        <div id="course-list" class="d-flex justify-content-center">
+            <div id="level1-essentials" class="card level-1 filterDiv" data-level="1">
+                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                    <img src="image/essentials.jpg" class="img-fluid" alt="essentials">
+                    <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Computer Essentials</h5>
+                    <p class="card-text">CST8101</p>
+                    <p class="card-text"><b><i>Level 1</i></b></p>
+                    <p class="card-text">
+                        The essentials of computer software, hardware, and laptop management form the foundation for
+                        building further technical programmingskills.
+                    </p>
+                </div>
+            </div>
+            <div id="level1-programming" class="card level-1 filterDiv" data-level="1">
+                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                    <img src="image/level1-programming.jpg" class="img-fluid" alt="programming">
+                    <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Introduction to Computer Programming</h5>
+                    <p class="card-text">CST8116</p>
+                    <p class="card-text"><b><i>Level 1</i></b></p>
+                    <p class="card-text">
+                        Possessing the fundamentals of logic, problem-solving and programming language structure
+                        provides a solid foundation for further studyin the field.
+                    </p>
+                </div>
+            </div>
+            <div id="level1-database" class="card level-1 filterDiv" data-level="1">
+                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                    <img src="image/level1-database.jpg" class="img-fluid" alt="database1">
+                    <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Introduction to Database</h5>
+                    <p class="card-text">CST8215</p>
+                    <p class="card-text"><b><i>Level 1</i></b></p>
+                    <p class="card-text">
+                        The fundamentals ofrelational databases design using Entity Relation Diagrams (ERDs), and use
+                        Structured Query Language (SQL) to create, modify and query adatabase.
+                </div>
+            </div>
+            <div id="level1-math" class="card level-1 filterDiv" data-level="1">
+                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                    <img src="image/level1-math.jpg" class="img-fluid" alt="math">
+                    <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Technical Mathematics for Computer Science</h5>
+                    <p class="card-text">MAT8001C</p>
+                    <p class="card-text"><b><i>Level 1</i></b></p>
+                    <p class="card-text">
+                        The study of algebraic and transcendental functions is an essential prerequisite to Calculus.
+                    </p>
+                </div>
+            </div>
+            <div id="level2-java" class="card level-2 filterDiv" data-level="2">
+                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                    <img src="image/level2-java.jpg" class="img-fluid" alt="java">
+                    <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Object Oriented Programming (Java)</h5>
+                    <p class="card-text">CST8284</p>
+                    <p class="card-text"><b><i>Level 2</i></b></p>
+                    <p class="card-text">
+                        Object oriented concepts, the basics of data structures and algorithms as well as basic
+                        Graphical User Interface (GUI) programming.
+                    </p>
+                </div>
+            </div>
+            <div id="level2-database" class="card level-2 filterDiv" data-level="2">
+                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                    <img src="image/level2-database.jpg" class="img-fluid" alt="database2">
+                    <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Database Systems</h5>
+                    <p class="card-text">CST2355</p>
+                    <p class="card-text"><b><i>Level 2</i></b></p>
+                    <p class="card-text">
+                        Hands-on experience with advanced engineering modeling tools along with SQL, SQL scripts and
+                        programming with Oracle's PL/SQL blocks
+                    </p>
+                </div>
+            </div>
+            <div id="level2-linux" class="card level-2 filterDiv" data-level="2">
+                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                    <img src="image/level2-linux.png" class="img-fluid" alt="linux">
+                    <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Operating System Fundamentals (GNU/Linux)</h5>
+                    <p class="card-text">CST2355</p>
+                    <p class="card-text"><b><i>Level 2</i></b></p>
+                    <p class="card-text">
+                        Operating system structures, process management, storage management,installation, configuration,
+                        and administration on GNU/Linux operating system.
+                    </p>
+                </div>
+            </div>
+            <div id="level2-web" class="card level-2 filterDiv" data-level="2">
+                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                    <img src="image/level2-web.jpg" class="img-fluid" alt="web">
+                    <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Web Programming</h5>
+                    <p class="card-text">CST8285</p>
+                    <p class="card-text"><b><i>Level 2</i></b></p>
+                    <p class="card-text">
+                        Basic skills of web programming, websitedesign and implementation by JavaScript, HTML5, and PHP.
+                    </p>
+                </div>
+            </div>
+            <div id="level2-coop" class="card level-2 filterDiv" data-level="2">
+                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                    <a href="https://www.algonquincollege.com/employment/hireac/">
+                        <img src="image/level2-coop.png" alt="Image description" class="img-fluid">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                        <div class="hover-overlay">
+                            <div class="mask" style="background-color: hsla(0, 0%,98%, 0.2)"></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Cooperative Education and Job Readiness</h5>
+                    <p class="card-text">GEP1001</p>
+                    <p class="card-text"><b><i>Level 2</i></b></p>
+                    <p class="card-text">
+                        A series of activities that prepare them to conduct a professional job search and succeed in the
+                        workplace.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- filter -->
+
+
+    </main>
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <nav>
+            <a href="#header-nav"><i class="bi bi-arrow-up"></i>Back to Top</a>
+        </nav>
+        <p class="col-md-4 mb-0 text-muted">Designed by Yueying Li</p>
+    </footer>
+</body>
+
+</html>
